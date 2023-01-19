@@ -1,15 +1,21 @@
 import './App.css';
-import {useContext, useEffect} from 'react';
+import { useContext, useEffect } from 'react';
 import { DataContext } from './Context';
 function App() {
-const {infoBase, quad}=useContext(DataContext)
+  const { resorts, quad } = useContext(DataContext)
 
-useEffect(()=>{
-  quad()
-},[])
+  useEffect(() => {
+    quad()
+  }, [])
   return (
     <div className="App">
-     {infoBase[0]?.Country}
+      {/* {resorts[0]?.Country} */}
+      {resorts?.map((item, index) => {
+        return(
+        <ul>
+          <li key={index}>{item.Country}</li>
+        </ul>)
+      })}
     </div>
   );
 }
