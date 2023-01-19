@@ -1,11 +1,15 @@
 import './App.css';
-import { useContext, useState } from 'react';
+import {useContext, useEffect} from 'react';
 import { DataContext } from './Context';
 function App() {
-const {infoBase}=useContext(DataContext)
+const {infoBase, quad}=useContext(DataContext)
+
+useEffect(()=>{
+  quad()
+},[])
   return (
     <div className="App">
-     {infoBase}
+     {infoBase[0]?.Country}
     </div>
   );
 }
