@@ -7,17 +7,17 @@ function Resorts() {
     useEffect(() => {
       quad()
     }, [])
-    console.log(resorts)
+    // console.log(resorts.doc.id)
     return (
       <div className="App">
+        <ul>
         {/* {resorts[0]?.Country}{resorts[0]?.Price} */}
         {resorts?.map((item, index) => {
           return(
-          <ul>
-            <li key={index}> {resorts.id}  {item.Country}</li>
-          </ul>)
-        })}
-        
+            <li key={index}> {item.id} located at   {item.data.Country}</li>
+          )})}
+          
+          </ul>
       </div>
     );
   }

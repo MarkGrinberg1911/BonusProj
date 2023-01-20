@@ -14,11 +14,13 @@ function Context(props) {
         const temp = []
         querySnapshot.forEach((doc) => {
             
-            temp.push(doc.id, doc.data())
-            
+            temp.push({id:doc.id,
+                data: doc.data()})
         });
         setResorts([...resorts, ...temp])
     }
+    // console.log(resorts[0]) 
+    console.log(resorts[1]) 
 
 
     return (
