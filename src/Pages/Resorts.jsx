@@ -11,10 +11,9 @@ function Resorts() {
     return (
       <div className="App">
         <ul>
-        {/* {resorts[0]?.Country}{resorts[0]?.Price} */}
         {resorts?.map((item, index) => {
           return(
-            <li key={index}> {item.id} located at   {item.data.Country}</li>
+            <li key={index}> {item.id} located at {item.data.Country}</li>
           )})}
           
           </ul>

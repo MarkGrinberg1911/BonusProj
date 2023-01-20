@@ -20,7 +20,7 @@ function Context(props) {
         setResorts([...resorts, ...temp])
     }
     // console.log(resorts[0]) 
-    console.log(resorts[1]) 
+    // console.log(resorts[1]) 
 
 
     return (
