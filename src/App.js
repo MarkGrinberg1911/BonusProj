@@ -2,12 +2,12 @@ import './App.css';
 import { useContext, useEffect } from 'react';
 import { DataContext } from './Context';
 import Resorts from './Pages/Resorts';
-import Admin from './Components/Admin';
+import ResortForm from './Components/ResortForm';
 function App() {
 
   return (
     <div className="App">
-<Admin/>
+<ResortForm/>
       <Resorts />
     </div>
   );
