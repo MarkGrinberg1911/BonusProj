@@ -1,13 +1,22 @@
 import { db } from "../FirebaseConfig";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, deleteDoc } from "firebase/firestore";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import Resorts from '../Pages/Resorts';
 
 function ResortForm(props) {
     const {register,handleSubmit, formState: { errors },} = useForm();
+    const [temp, setTemp]=useState("")
     const AddDoc = async (data) => {
         await setDoc(doc(db, "Resorts", data.resortName), data);
         window.location.reload(true)
     }
+    const Delete=async()=>{
+        await deleteDoc(doc(db, "Resorts", temp));
+        window.location.reload(true)
+
+    }
+    console.log(temp)
     
     return (
         <div>
@@ -23,6 +32,16 @@ function ResortForm(props) {
                 {errors.about && <p>Please insert description</p>}
                 <input type="submit" />
             </form>
+            <Resorts />
+            <br/>
+            <br/>
+            <br/>
+<p>Delete Resort !!!!</p>
+<input onChange={((e)=>setTemp(e.target.value))} type="text" />
+<button onClick={Delete}>Delete Resort</button>
+<p></p>
+
+    
         </div>
     );
 }
