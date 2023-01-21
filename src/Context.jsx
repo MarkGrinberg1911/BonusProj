@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { db } from "./FirebaseConfig";
-import { collection, query, getDocs, doc } from "firebase/firestore";
+import { collection, query, getDocs} from "firebase/firestore";
 
 export const DataContext = createContext();
 function Context(props) {

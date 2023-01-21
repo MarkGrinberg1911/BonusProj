@@ -14,9 +14,7 @@ function ResortForm(props) {
     const Delete=async()=>{
         await deleteDoc(doc(db, "Resorts", temp));
         window.location.reload(true)
-
     }
-    console.log(temp)
     
     return (
         <div>
@@ -25,7 +23,7 @@ function ResortForm(props) {
 
             <form onSubmit={handleSubmit((data) => AddDoc(data))}>
                 <input placeholder="Resort Name" {...register('resortName', { required: true })} />
-                {errors.resortName && <p>Please Resort Name</p>}
+                {errors.resortName && <p>Please insert Resort Name</p>}
                 <input placeholder="Country" {...register('Country', { required: true })} />
                 {errors.country && <p>Please insert Country</p>}
                 <input placeholder="About" {...register('About', { required: true })} />
@@ -39,9 +37,7 @@ function ResortForm(props) {
 <p>Delete Resort !!!!</p>
 <input onChange={((e)=>setTemp(e.target.value))} type="text" />
 <button onClick={Delete}>Delete Resort</button>
-<p></p>
 
-    
         </div>
     );
 }

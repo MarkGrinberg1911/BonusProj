@@ -1,11 +1,18 @@
 import './App.css';
 import ResortForm from './Components/ResortForm';
+import AppBar from './Components/AppBar';
+import Card from  './Components/Card'
+import { AddBoxOutlined } from '@mui/icons-material';
 function App() {
 
   return (
-    <div className="App">
-<ResortForm/>
-    </div>
+    <>
+
+    <AppBar/>
+
+
+
+    </>
   );
 }
 
