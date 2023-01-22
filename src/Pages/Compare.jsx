@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { DataContext } from './Context';
 function Compare(props) {
+    
     return (
         <div>
             
@@ -9,3 +10,5 @@ function Compare(props) {
 }
 
 export default Compare;
+
+  

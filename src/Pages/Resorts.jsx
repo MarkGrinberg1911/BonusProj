@@ -7,7 +7,6 @@ function Resorts() {
     useEffect(() => {
       quad()
     }, [])
-    // console.log(resorts.doc.id)
     return (
       <div className="App">
         <ul>
